@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Smart College Events",
+    "slug": "smart-college-events",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "smartcollegeevents",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#4DA6FF"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-barcode-scanner",
+        {
+          "cameraPermission": "Allow Smart College Events to access camera for QR attendance scanning."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Smart College Events to access your photos."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.smartcollege.events"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#4DA6FF"
+      },
+      "package": "com.smartcollege.events"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
