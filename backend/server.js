@@ -15,6 +15,7 @@ app.use((req, res, next) => { console.log(req.method, req.url); next(); });
 
 // MongoDB Connection
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/smartevents';
+console.log('🔗 Connecting to MongoDB with URI prefix:', MONGO_URI.substring(0, 40) + '...');
 mongoose.connect(MONGO_URI, { serverSelectionTimeoutMS: 5000, family: 4 })
   .then(() => console.log('✅ Connected to MongoDB'))
   .catch(err => {
